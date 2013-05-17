@@ -22,10 +22,15 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  When I follow "Movie Title"
-  # your steps here
+  #5/15/13 G. Miller-Messner
+  When I follow "Movie Title"   
+  Then I should see "Aladdin" before "The Terminator" 
+#If Aladdin comees before The Terminator we know the movies are sorted alphabetically
 
 Scenario: sort movies in increasing order of release date
-  When I follow "Release Date"
-  # your steps here
+   #5/15/13 G. Miller-Messner
+  When I follow "Release Date"     
+  Then I should see "When Harry Met Sally" before "Amelie" 
+
+  #If When Harry Met Sally comes befores Amelie we know the movies are sorted by release date
 
